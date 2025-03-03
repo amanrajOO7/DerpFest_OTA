@@ -1,117 +1,189 @@
 ====================
-    02-24-2025     
+    03-03-2025     
 ====================
+
+* build/soong
+014a081  Add vendor/derp to kotlin plugins neverallow  [Luca Stefani]
+737f82e  Add support for kotlin plugins  [Luca Stefani]
+
+
+* device/derp/sepolicy
+ece3f99  sepolicy: include flipendo/turbo_adapter policy  [Anay Wadhera]
+
+
+* external/kotlinc
+91d40e2  Add parcelize kotlin compiler plugin  [Luca Stefani]
+fb996ba  Add a target for kotlin-serialize-compiler  [Luca Stefani]
+
+
+* external/kotlinx.coroutines
+dda86ea  Add sdk_version to the kotlinx_coroutines_guava target  [Yash]
+
+
+* external/kotlinx.serialization
+e5d0ab7  Export r8 rules to users  [Luca Stefani]
+
 
 * frameworks/base
-5929162  SettingLib: Show only the current network IP addresses  [Adithya R]
-e8c276c  Revert "Disallow certain power menu items while in lock task mode"  [NurKeinNeid]
+a0e52b6  OnGoingActionProgressController: Improve logging for progress tracking  [NurKeinNeid]
+69ade89  OnGoingActionProgressController: Fix potential null key comparison  [NurKeinNeid]
+4d0f5c2  OnGoingActionProgressController: Remove redundant drawable setting in updateViews()  [NurKeinNeid]
+961577d  OnGoingActionProgressController: Store current drawable for icon  [NurKeinNeid]
+d6174f0  SystemUI: GlobalActions: Hide user switcher in some more cases  [Adithya R]
 
 
-* frameworks/derpfest
-47f500a  health: Rename msToUTCString to msToHMSString  [Luofan Chen]
+* manifest
+6a2e35f  manifest: Track google-interfaces  [Sourajit Karmakar]
+44ff7c1  manifest: Track our kotlinc/kotlinx.{coroutines,serialization} forks  [LuK1337]
 
 
-* kernel/xiaomi/sdm845
-c037497  mi845_defconfig: Enable KernelSU  [Aman Singh]
-0302041  kernel: backport get_cred_rcu  [Aman Singh]
-86503a8  selinux: Allow init exec ksud under nosuid  [F-19-F]
-c7b23e5  fs: backport path_umount and can_umount  [Aman Singh]
-9094f4b  Import KernelSU-Next  [Aman Singh]
+* packages/apps/DerpFestSettings
+780db00  DerpFestSettings: Make Settings Services' battery widget work  [ReallySnow]
+fade9d6  DerpFestSettings: Import BT Slice intent resources from SettingsGoogle  [someone5678]
 
 
-* packages/apps/DerpLauncher
-b690961  fixup! DerpLauncher: Add recents shortcut for floating window  [Adithya R]
-0f1c031  DerpLauncher: SwitchPreference -> SwitchPreferenceCompat  [Ido Ben-Hur]
-b39d9b4  DerpLauncher: Update widget section  [NurKeinNeid]
-
-
-* packages/apps/FMRadio
-d8a099f  jni: Move customisation to properties  [bengris32]
-ed507a0  jni: Always build noise floor detect code and make it conditional  [bengris32]
-7446ded  Automatic translation import  [LineageOS Infra]
-
-
-* packages/apps/Flash
-59bb3b7  Automatic translation import  [LineageOS Infra]
-
-
-* packages/apps/LMOFreeform
-83ac1c1  sidebar: Relayout sidebar on configuration change  [Adithya R]
-88662f8  sidebar: Disable in secondary user  [Adithya R]
-1361eb3  sidebar: Handle parallel space and user profile apps  [Adithya R]
-
-
-* packages/apps/Updater
-328db2b  Updater: Add welcome message with instructions  [Michael W]
-
-
-* vendor/derp
-3f0963e  config: Install FRP wipe script into recovery /system/bin  [LuK1337]
-
-
-====================
-    02-23-2025     
-====================
-
-* frameworks/base
-cf214e3  SystemUI: Implement burn-in protection for status/navbar  [Park Ju Hyung]
-b7ff7a9  SystemUI: Enhance ongoing action progress tracking logic  [NurKeinNeid]
-0e12bbe  SystemUI: Reset ongoing action progress state on notification removal  [NurKeinNeid]
-b51a858  SystemUI: Optimize ongoing action progress chip update logic  [NurKeinNeid]
-0124d51  SystemUI: Add ongoing action chip toggle setting [1/2]  [NurKeinNeid]
-b6719f5  Ongoing action progressbar chip implementation  [Anna-Sophie Kasierocka]
-63e348f  fixup! SystemUI: Refactor Island notification feature  [NurKeinNeid]
-
-
-* hardware/lineage/compat
-ee08dfa  compat: libnativehelper: clang-format  [LuK1337]
-dfdc32e  compat: libaudioproxy: clang-format  [LuK1337]
-
-
-* kernel/xiaomi/sdm845
-8e97d90  diag: Fix compilation error with new sdclang 12  [Swetha Chikkaboraiah]
-95eebaf  smcinvoke : Make sure tzhandle is set before f frees  [wenji]
-c47aef0  msm: mdp3: fix the use after free problem  [Raghavendra Ambadas]
-f8548de  fbdev: msm: check for valid fence before using objects  [Raghavendra Ambadas]
-75b66a6  drm/vgem: Close use-after-free race in vgem_gem_create  [Daniel Vetter]
-1f50d02  BACKPORT: can: usb_8dev: usb_8dev_start_xmit(): fix double dev_kfree_skb() in error path  [Hangyu Hua]
-5f1febdf  UPSTREAM: f2fs: fix UAF in f2fs_available_free_memory  [Dongliang Mu]
-00c8179  BACKPORT: f2fs: allow to change discard policy based on cached discard cmds  [Sahitya Tummala]
-4132282  BACKPORT: tee: handle lookup of shm with reference count 0  [Jens Wiklander]
-a936d50  ANDROID: dm-bow: Protect Ranges fetched and erased from the RB tree  [Lee Jones]
-b3a2f9d  diag: Sanitize the mempools with pool data size check  [Manoj Prabhu B]
-75dae48  ANDROID: usb: gadget: f_accessory: Mitgate handling of non-existent USB request  [Lee Jones]
-fde11c3  UPSTREAM: ALSA: usb-audio: Fix a DMA to stack memory bug  [Dan Carpenter]
-a8fdfb9  UPSTREAM: ALSA: usb-audio: Fix potential out-of-bound accesses for Extigy and Mbox devices  [Benoît Sevens]
-33aec4a  UPSTREAM: USB: media: uvcvideo: Skip parsing frames of type UVC_VS_UNDEFINED in uvc_parse_format  [Benoit Sevens]
-0f60939  msm: camera: sensor: TOCTOU error handling  [Swami Reddy Reddy]
+* packages/apps/DerpFestSystemUI
+b4b4dbc  DerpFestSystemUI: Import Turbo based battery estimates  [Sourajit Karmakar]
+75eec19  DerpFestSystemUI: Refactor package structure  [NurKeinNeid]
+9abc05b  DerpFestSystemUI: Implement adaptive charging based on Google battery HAL  [Anay Wadhera]
 
 
 * packages/apps/Settings
-d6da3dc  Settings: Add ongoing action chip toggle setting [2/2]  [NurKeinNeid]
+bc5e71d  Revert "Settings: Make google's battery widget work"  [NurKeinNeid]
 
 
-* vendor/xiaomi/sdm845-common
-6773179  sdm845-common: Update system blobs to LA.QSSI.15.0.r1-13300-qssi.0  [Aman Singh]
+* vendor/derp
+36d9a87  Add `androidx.compose.compiler_compiler-hosted-plugin` define  [Luca Stefani]
+d4b846e  generate_json_build_info: Enhance script robustness and error handling  [NurKeinNeid]
+a4e924c  generate_json_build_info: Support generating JSON for community builds  [NurKeinNeid]
 
 
 ====================
-    02-22-2025     
+    03-02-2025     
+====================
+
+* build/make
+45d602e  envsetup: Drop the unnecessary spam_for_lunch  [Sourajit Karmakar]
+
+
+* frameworks/base
+63b2c0e  Automatic translation import  [LineageOS Infra]
+ee2a406  Catch BadParcelableException when checking extras  [Luca Stefani]
+87753da  Catch all exceptions when loading images  [Jernej Virag]
+c9cb3dc  Revert "Handle all exceptions when loading artwork bitmap"  [Luca Stefani]
+bc90ef7  pm: aconfig: do not error on missing flag files  [Thomas Makin]
+f3ba470  Revert "pm: aconfig: do not error on missing flag files"  [NurKeinNeid]
+6d3fca6  SystemUI: Add QS gradient [2/3]  [f104a]
+c95213e  SettingLib: Show only the current network IP addresses  [Adithya R]
+ad99783  Revert "Disallow certain power menu items while in lock task mode"  [NurKeinNeid]
+77841de  SystemUI: Implement burn-in protection for status/navbar  [Park Ju Hyung]
+44cfc05  SystemUI: Reset ongoing action progress state on notification removal  [NurKeinNeid]
+7a641fd  SystemUI: Hide ongoing action progress chip on lockscreen  [f104a]
+51adf13  SystemUI: Don't tint progressbar chip icon  [f104a]
+
+
+* frameworks/derpfest
+325ad00  ChargingControl: Prevent crash against very frequent power toggle  [Oliver Scott]
+53a3e90  health: Catch all setCharging*() exceptions  [LuK1337]
+ec58f10  frameworks: Get rid of org.derpfest.os.Concierge  [Michael Bestas]
+5aa9d86  frameworks: Optimize imports  [Michael W]
+fb8ac60  frameworks: FloatMath is deprecated  [Michael W]
+a53e85a  frameworks: A few finals don't hurt  [Michael W]
+1a41a88  frameworks: Call Handler()'s correct constructor  [Michael W]
+34cd3a6  frameworks: Try getting LineageHardwareService again before checking for it  [Andy CrossGate Yan]
+144e0cb  frameworks: Remove no longer used ACTION_UPDATE_POWER_MENU intent  [Bruno Martins]
+
+
+* hardware/interfaces
+a3c7c01  Merge branch 'lineage-22.1' of https://github.com/LineageOS/android_hardware_interfaces into HEAD  [NurKeinNeid]
+
+
+* hardware/lineage/interfaces
+49a64a9  aidl: light: Treat keyboard devices as keyboards  [Sebastiano Barezzi]
+4a147ab  aidl: light: Support `charging` LED  [Nolen Johnson]
+
+
+* hardware/qcom-caf/bootctrl
+9a64b83  gpt-utils: skip swapping xbl_config slots  [Cosmin Tanislav]
+3b17191  bootctrl/gpt-utils: Check for full partiton name instead of partial prefix  [SGCMarkus]
+ef1bf26  gpt-utils: Add OTA support for FIH Nokia partitions  [Tuan Anh]
+f306c65  gpt-utils: Add OTA support for Razer partitions  [Michael Bestas]
+
+
+* kernel/xiaomi/sdm845
+c44a348  mm: page_alloc: Set watermark scale factor to 120  [KanonifyX]
+5a61060  mi845_defconfig: Reconfig cpu governor  [KanonifyX]
+55731c4  cpufreq: Introduce walt cpufreq governor  [kanonifyX]
+52334c5  cpufreq: schedhorizon: Tune schedhorizon for SDM845  [kanonifyX]
+7eaced0  cpufreq: Introduce schedhorizon cpufreq governor  [kanonifyX]
+de356cb  cpufreq: schedutil: Fix iowait boost reset  [Patrick Bellasi]
+6facaf8  cpufreq: schedutil: Use unsigned int for iowait boost  [Joel Fernandes]
+de331b0  cpufreq: schedutil: Make iowait boost more energy efficient  [Joel Fernandes]
+fedd183  cpufreq: schedutil: Reduce frequencies slower  [Rafael J. Wysocki]
+a8599fb  cpufreq: schedutil: Fix error path mutex unlock  [Jules Maselbas]
+14d7010  mi845_defconfig: Enable cpumask  [KanonifyX Tzy]
+628daa0  sched: Add API to migrate the current process to a given cpumask  [Sultan Alsawaf]
+dded510  cpumask: Add cpumasks for BIG and LITTLE CPU clusters  [Sultan Alsawaf]
+c712b62  mi845_defconfig: Enable BORE scheduler  [kanonifyX]
+
+
+* packages/apps/ColumbusService
+dc91c26  ColumbusService: Kotlin code style and minor improvements  [NurKeinNeid]
+
+
+* packages/apps/Settings
+e38bacb  Automatic translation import  [LineageOS Infra]
+3c229a9  Automatic translation import  [LineageOS Infra]
+
+
+* packages/apps/ThemePicker
+a3b4261  ThemePicker: Add QS gradient [3/3]  [f104a]
+
+
+* packages/apps/Updater
+8390b26  Automatic translation import  [LineageOS Infra]
+58aa33c  Automatic translation import  [LineageOS Infra]
+6ccf23b  Updater: Add welcome message with instructions  [Michael W]
+
+
+* prebuilts/derp
+e573552  Merge pull request #1 from selfmusing/15  [Alexander Brunswig]
+
+
+* system/security
+3395587  Await boot_completed before allowing GC  [David Drysdale]
+
+
+* vendor/overlay
+795abb9  overlay: Add QS gradient [1/3]  [f104a]
+
+
+====================
+    03-01-2025     
 ====================
 
 ====================
-    02-21-2025     
+    02-28-2025     
 ====================
 
+* prebuilts/derp
+d6bbde1  prebuilt: Update accord  [selfmusing]
+
+
 ====================
-    02-20-2025     
+    02-27-2025     
 ====================
 
-* device/qcom/sepolicy_vndr/sm8450
-0624d88  sepolicy: NFC: Label NXP NFC 2.0 HIDL  [Luofan Chen]
+* hardware/interfaces
+7381227  compatibility_matrices: Allow radio 1.5 on target-level 6  [Yumi Yukimura]
 
 
-* device/qcom/sepolicy_vndr/sm8550
-78af557  sepolicy: NFC: Label NXP NFC 2.0 HIDL  [Luofan Chen]
+* tools/extract-utils
+0239fa3  extract_utils: try to move SaR even if all partitions are there  [Cosmin Tanislav]
+c069833  extract_utils: add support extracting Moto PIV images  [Cosmin Tanislav]
+
+
+* vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um
+4944205  Revert "Revert "ipacm: Add support for DataWarning limit""  [Tyler Wear]
 
 
